@@ -1,6 +1,7 @@
 package com.paul9537.test.lesson1.model;
 
 public class UserInfo {
+	
 	private String title;
 	private String user;
 	private String content;
