@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
-@MapperScan(basePackages = "com.paul9537.ex.*")
+@MapperScan(basePackages = "com.paul9537.test.*")
 @Configuration
 public class DatabaseConfig {
 
