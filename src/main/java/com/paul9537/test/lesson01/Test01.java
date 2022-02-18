@@ -1,4 +1,4 @@
-package com.paul9537.test.lesson1;
+package com.paul9537.test.lesson01;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.paul9537.test.lesson1.model.UserInfo;
+import com.paul9537.test.lesson01.model.UserInfo;
 
 @RestController
 @RequestMapping("/lesson1/test01")

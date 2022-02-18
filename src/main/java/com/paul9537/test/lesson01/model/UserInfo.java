@@ -1,4 +1,4 @@
-package com.paul9537.test.lesson1.model;
+package com.paul9537.test.lesson01.model;
 
 public class UserInfo {
 	
