@@ -17,8 +17,8 @@
 		<h2>판매자 정보</h2>
 		<div>
 			<div>${seller.profileImageUrl }</div>
-			<div>${seller.nickname }</div>
-			<div>${seller.temperature }</div>
+			<div class="display-4">${seller.nickname }</div>
+			<div class="text-warning">${seller.temperature }</div>
 		</div>
 	</div>	
 	
