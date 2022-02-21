@@ -14,7 +14,7 @@
 <body>
 	<div class="container">
 		<h1>판매자 추가</h1>
-		<form method="get" action="/test01/add_seller">
+		<form method="post" action="/lesson04/test01/add_seller">
 			<label>닉네임</label> <input type="text" class="form-control col-4" name="nickname">
 			<label>프로필 사진 url</label> <input type="text" class="form-control col-10" name="profileImageUrl">
 			<label>온도</label> <input type="text" class="form-control col-4" name="temperature">

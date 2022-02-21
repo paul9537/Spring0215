@@ -29,12 +29,12 @@ public class SellerController {
 		return "/lesson04/test_2";
 	}
 	
-	@RequestMapping("test01/add_user")
+	@RequestMapping("test01/add_seller")
 	@ResponseBody
 	public String insertSeller(
 			@RequestParam("nickname") String nickname,
 			@RequestParam("profileImageUrl") String profileImageUrl,
-			@RequestParam("temperatrue") double temperature) {
+			@RequestParam("temperature") double temperature) {
 		int count = sellerBO.insertSeller(nickname, profileImageUrl, temperature);
 		
 		return "입력 결과 : " + count;

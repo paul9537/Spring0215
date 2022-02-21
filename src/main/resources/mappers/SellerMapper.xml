@@ -6,11 +6,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.paul9537.test.lesson04.dao.SellerDAO">
 	
-	<insert id="insertSeller" parameterType="com.paul9537.test.lesson04.model.Seller">
+	<insert id="insertSeller" parameterType="map">
 		INSERT INTO `seller`
 		(
-			  `id`
-			, `nickname`
+			 `nickname`
 			, `profileImageUrl`
 			, `temperature`
 			, `createdAt`
@@ -19,6 +18,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			#{nickname}
 			, #{profileImageUrl}
 			, #{temperature}
+			, now()
+			, now()
 		)
 	</insert>
 	
