@@ -106,9 +106,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<update id="updateRealEstateById" parameterType="map">
 		UPDATE `real_estate`
 		SET
-			 `price` = #{price}
+			`type` = #{type}
+			, `price` = #{price}
+			, `updatedAt` = now()
 		WHERE
-			 `id` = 27;
+			 `id` = #{id}
 	</update>
+	
+	<delete id="deleteRealEstateById" parameterType="map">
+		DELETE FROM `real_estate`
+		WHERE
+			`id` = #{id}
+	</delete>
 	
 </mapper>

@@ -74,8 +74,18 @@ public class RealEstateController {
 	@RequestMapping("/test03/1")
 	@ResponseBody
 	public String addRealEstateById() {
-		int count = realEstateBO.adjustRealEstateById(70000);
+		int count = realEstateBO.adjustRealEstateById(27, "전세", 70000);
 		return "UPDATE 결과 : " + count;
+	}
+	
+	// DELETE 다루기
+	
+	// 1. DELETE
+	@RequestMapping("/test04/1")
+	@ResponseBody
+	public String deleteRealEstateById(@RequestParam("id") int id) {
+		int count = realEstateBO.deleteByRealEstate(id);
+		return "DELETE 결과 : " + count;
 	}
 	
 }

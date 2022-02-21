@@ -44,10 +44,15 @@ public class RealEstateBO {
 	// UPDATE 다루기
 	
 	// 1.
-	public int adjustRealEstateById(int price) {
-		return realEstateDAO.updateRealEstateById(price);
+	public int adjustRealEstateById(int id, String type, int price) {
+		return realEstateDAO.updateRealEstateById(id, type, price);
 	}
 	
+	// DELETE 다루기
 	
+	// 1.
+	public int deleteByRealEstate(int id) {
+		return realEstateDAO.deleteRealEstateById(id);
+	}
 	
 }

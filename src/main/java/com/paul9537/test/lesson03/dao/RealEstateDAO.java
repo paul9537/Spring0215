@@ -38,6 +38,12 @@ public interface RealEstateDAO {
 	
 	// 1.
 	public int updateRealEstateById(
+		@Param("id") int id,
+		@Param("type") String type,
 		@Param("price") int price);
+	// DELETE 다루기
 	
+	// 1.
+	public int deleteRealEstateById(@Param("id") int id);
+		
 }
