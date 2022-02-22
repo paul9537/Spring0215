@@ -23,7 +23,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		)
 	</insert>
 	
-	<select id="getSellerInfo" resultType="com.paul9537.test.lesson04.model.Seller">
+	<select id="selectLastSeller" resultType="com.paul9537.test.lesson04.model.Seller">
 		SELECT
 			`id`
 			, `nickname`
@@ -37,5 +37,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		LIMIT 1
 	</select>
 	
+	<select id="selectSeller" parameterType="int" resultType="com.paul9537.test.lesson04.model.Seller">
+		SELECT
+			`id`
+			, `nickname`
+			, `profileImageUrl`
+			, `temperature`
+			, `createdAt`
+			, `updatedAt`
+		FROM
+			`seller`
+		WHERE
+			`id` = #{id}
+	</select>
 
 </mapper>

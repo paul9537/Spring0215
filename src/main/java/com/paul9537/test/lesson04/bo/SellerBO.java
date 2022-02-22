@@ -12,11 +12,15 @@ public class SellerBO {
 	@Autowired
 	private SellerDAO sellerDAO;
 	
-	public Seller getSellerInfo() {
-		return sellerDAO.getSellerInfo();
-	}
-	
 	public int insertSeller(String nickname, String profileImageUrl, double temperature) {
 		return sellerDAO.insertSeller(nickname, profileImageUrl, temperature);
+	}
+	
+	public Seller getLastSeller() {
+		return sellerDAO.selectLastSeller();
+	}
+	
+	public Seller getSeller(int id) {
+		return sellerDAO.selectSeller(id);
 	}
 }
