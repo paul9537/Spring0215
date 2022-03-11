@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.paul9537.test.lesson06.dao.BookingDAO">
+	<select id="selectBooking" resultType="com.paul9537.test.lesson06.model.Booking">
+		SELECT
+			`id`
+			, `name`
+			, `headcount`
+			, `day`
+			, `date`
+			, `phoneNumber`
+			, `state`
+			, `createdAt`
+			, `updatedAt`
+		FROM
+			`booking`
+		ORDER BY
+			`id` DESC
+	</select>
+	
+	<insert id="addBooking" parameterType="map">
+		INSERT INTO
+			`booking`
+		(
+			`name`
+			, `headcount`
+			, `day`
+			, `date`
+			, `phoneNumber`
+			, `state`
+			, `createdAt`
+			, `updatedAt`
+		) VALUE (
+			#{name}
+			, #{headcount}
+			, #{day}
+			, #{date}
+			, #{phoneNumber}
+			, #{state}
+			, now()
+			, now()
+		)
+	</insert>
+	
+	<select id="selectBookings" parameterType="map" resultType="com.paul9537.test.lesson06.model.Booking">
+		SELECT
+			`id`
+			, `name`
+			, `headcount`
+			, `day`
+			, `date`
+			, `phoneNumber`
+			, `state`
+			, `createdAt`
+			, `updatedAt`
+		FROM
+			`booking`
+		WHERE
+			`name` = #{name}
+			AND `phoneNumber` = #{phoneNumber}
+	</select>
+	
+	<update id="updateState" parameterType="int">
+		UPDATE `booking`
+		SET
+			`state` = '확정'
+		WHERE
+			`id` = #{id}
+	</update>
+</mapper>
+
+
