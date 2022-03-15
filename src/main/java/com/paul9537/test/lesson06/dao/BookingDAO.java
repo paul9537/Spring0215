@@ -13,7 +13,7 @@ public interface BookingDAO {
 	
 	public List<Booking> selectBooking();
 	
-	public int addBooking(
+	public int insertBooking(
 			@Param("name") String name,
 			@Param("headcount") int headcount,
 			@Param("day") int day,

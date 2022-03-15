@@ -18,8 +18,14 @@ public class BookingBO {
 		return bookingDAO.selectBooking();
 	}
 	
-	public int addBooking(String name, int headcount, int day, String date, String phoneNumber) {
-		return bookingDAO.addBooking(name, headcount, day, date, phoneNumber, date);
+	public int addBooking(
+			String name, 
+			int headcount, 
+			int day, 
+			String date, 
+			String phoneNumber) {
+		
+		return bookingDAO.insertBooking(name, headcount, day, date, phoneNumber, "대기중");
 	}
 	
 	public Booking getBookings(String name, String phoneNumber) {

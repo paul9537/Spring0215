@@ -78,21 +78,13 @@
 
 	<script>
     $(document).ready(function() {
-
-        $("#dateInput").datepicker({
-            changeMonth: true,  // 월 셀렉트 박스 
-            changeYear: true,   // 년 셀렉트 박스 
-            minDate:0,
-            dateFormat:"yy-mm-dd",  // 표시 포멧 
-        });
-        
         
         $("#reserveBtn").on("click", function(){
         	let name = $("#nameInput").val();
         	let date = $("#dateInput").val();
         	let day = $("#dayInput").val();
         	let headcount = $("#headcountInput").val();
-        	let phoneNumber = $("#phoneNumber").val();
+        	let phoneNumber = $("#phoneNumberInput").val();
         	
         	if(name == "") {
         		alert("이름을 입력하세요");
@@ -145,7 +137,17 @@
 	        		alert("예약 오류");
 	        	}
 	        });
+
         });
+
+        $("#dateInput").datepicker({
+            changeMonth: true,  // 월 셀렉트 박스 
+            changeYear: true,   // 년 셀렉트 박스 
+            minDate:0,
+            dateFormat:"yy-mm-dd",  // 표시 포멧 
+        });
+        
+        
         
     });
 	

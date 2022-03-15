@@ -60,7 +60,7 @@
             </nav>
             <section>
                 <section class="top-section bg-success">
-                    <img src="test06_banner1.jpg" alt="통나무팬션">
+                    <img src="http://marondal.com/material/images/dulumary/web/front/jquery/test06_banner1.jpg" alt="통나무팬션">
                 </section>
                 <aside class="bot-section bg-info d-flex">
                     <div class="reserve col-4 display-4"><a href="#" class="text-white">실시간 예약하기</a></div>
@@ -108,14 +108,14 @@
 						if(data.result == "fail") {
 							alert("예약 내역이 없습니다");
 						} else {
-						alert("이름" : + data.booking.name + "\n"
+						alert("이름 : " + data.booking.name + "\n"
 								+ "날짜 : " + data.booking.date.slice(0, 10) + "\n"
 								+ "일수 : " + data.booking.day);
 						}
 						
-						
 					},
 					error:function() {
+						alert("조회 에러");
 					}
 				});
 			

@@ -22,7 +22,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			`id` DESC
 	</select>
 	
-	<insert id="addBooking" parameterType="map">
+	<insert id="insertBooking" parameterType="map">
 		INSERT INTO
 			`booking`
 		(

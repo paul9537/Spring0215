@@ -65,12 +65,13 @@ public class BookingController {
 	
 	@GetMapping("/get_booking")
 	@ResponseBody
-	public Map<String, Object> getBooking(@RequestParam("name") String name,
+	public Map<String, Object> getBooking(
+			@RequestParam("name") String name,
 			@RequestParam("phoneNumber") String phoneNumber) {
 		
 		Booking booking = bookingBO.getBookings(name, phoneNumber);
 		// {"result":"success", 
-		// "booking": {"name":"장나라", "phoneNumber":"010-2222-0000", "date":"2022-03-10", "day":4}}
+		// {"booking": {"name":"장나라", "phoneNumber":"010-2222-0000", "date":"2022-03-10", "day":4}}
 		// {"name":"장나라", "phoneNumber":"010-2222-0000", "date":"2022-03-10", "day":4}
 		
 		Map<String, Object> result = new HashMap<>();
